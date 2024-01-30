@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="w-full h-screen" >
       
-      <div className="grid grid-rows-2 gap-4">
+      <div className="grid grid-rows-2 gap-4 h-full">
         <div className="grid grid-cols-2 gap-4 mt-28">
           <div className="p-4 align-middle flex justify-center">
 
@@ -27,7 +27,7 @@ export default function Home() {
 
           </div>
           <div className="p-4 flex items-center justify-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png" 
+            <img src="https://ik.imagekit.io/23umzxu6uw/3.png?updatedAt=1706607362158" 
                 alt=""
                 className="w-48 h-48 object-cover"
             />
@@ -35,53 +35,53 @@ export default function Home() {
           </div>
         </div>
 
-    <div className="flex justify-end ">
-      <div className="grid grid-cols-4 w-[90%] ">
-            <div className="">
+            <div className="flex justify-end ">
+              <div className="grid grid-cols-4 w-[90%] ">
+                    <div className="">
 
-              <div className="p-4 h-4/5 flex flex-col text-right justify-around">
-                  <h1 className="text-2xl font-bold">Say Hello</h1>
-                  <a className="text-sm" href="">zafajardo9@gmail.com</a>
+                      <div className="p-4 h-4/5 flex flex-col text-right justify-around">
+                          <h1 className="text-2xl font-bold">Say Hello</h1>
+                          <a className="text-sm" href="">zafajardo9@gmail.com</a>
 
-                  <div className="social-icons">
-                    <SocLinks />
+                          <div className="social-icons">
+                            <SocLinks />
+                          </div>
+
+                      </div>
+
+
+                        <p className="text-xs">Built By Zack</p>
+                    </div>
+
+
+                    <div className="bg-colorOne p-8 text-white font-bold flex flex-col justify-between">
+                      <div className="text-2xl"><h1>My Works</h1></div>
+
+                      <Button variant="custom">
+                        <Link href="#">See more</Link>
+                      </Button>
+                    </div>
+                    <div className="bg-colorTwo p-8 text-white font-bold flex flex-col justify-between">
+                    <div className="text-2xl"><h1>Hobbies</h1></div>
+
+                      <Button variant="custom">
+                        <Link href="#"> See more</Link>
+                      </Button>
+
+                    </div>
+
+                    <div className="bg-colorThree p-8 text-white font-bold flex flex-col justify-between">
+
+
+                    <div className="text-2xl"><h1>My Works</h1></div>
+
+                      <Button variant="custom">
+                        <Link href="#">See more</Link>
+                      </Button>
+
+                    </div>
                   </div>
-
-              </div>
-
-
-                <p className="text-xs">Built By Zack</p>
             </div>
-
-
-            <div className="bg-colorOne p-8 text-white font-bold flex flex-col justify-between">
-              <div className="text-2xl"><h1>My Works</h1></div>
-
-              <Button variant="custom">
-                <Link href="#">See more</Link>
-              </Button>
-            </div>
-            <div className="bg-colorTwo p-8 text-white font-bold flex flex-col justify-between">
-            <div className="text-2xl"><h1>Hobbies</h1></div>
-
-              <Button variant="custom">
-                <Link href="#"> See more</Link>
-              </Button>
-
-            </div>
-
-            <div className="bg-colorThree p-8 text-white font-bold flex flex-col justify-between">
-
-
-            <div className="text-2xl"><h1>My Works</h1></div>
-
-              <Button variant="custom">
-                <Link href="#">See more</Link>
-              </Button>
-
-            </div>
-          </div>
-    </div>
 
 
       </div>
