@@ -4,6 +4,8 @@ import Link from 'next/link';
 import React, { ReactNode } from 'react';
 
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { Switch } from "@/components/ui/switch"
+
 interface ButtonProps {
     children: ReactNode;
    }
@@ -33,7 +35,7 @@ export function Navbar() {
                 
             </div>
             <div className="flex items-center divide-x">
-                <Button>Toggle Button</Button>
+                <Switch/>
             </div>
 
             <BsThreeDotsVertical />
