@@ -5,8 +5,10 @@ import React, { ReactNode } from 'react';
 
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Switch } from "@/components/ui/switch"
+import { FiMenu } from "react-icons/fi";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
+import { DrawerTrigger } from '../ui/drawer';
 
 
 
@@ -23,25 +25,22 @@ export function Navbar() {
                 <ul className="relative flex items-center justify-between h-16 bg-gray space-x-8">
 
                     <li>
-                        <Link href="/about" className="hover:font-bold">Works</Link>
-                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black transform origin-bottom scale-x-0 transition-transform group-hover:scale-x-100"></span>
-                    </li>
-                    <li>
                         <Button variant="main">
-                            
-                        
-                        <Link href="https://ik.imagekit.io/23umzxu6uw/sample.pdf?updatedAt=1706605367594" className="hover:font-bold">Download Resume</Link>
+                            <Link href="https://ik.imagekit.io/23umzxu6uw/sample.pdf?updatedAt=1706605367594" className="hover:font-bold" data-no-prefetch>Download Resume</Link>
                         </Button>
                     </li>
-
+                    
+                    <li>
+                        <DrawerTrigger>
+                            {/* <Button variant="ghost"> */}
+                                <FiMenu />
+                            {/* </Button> */}
+                        </DrawerTrigger>
+                    </li>
+                    
                 </ul>
                 
             </div>
-            {/* <div className="flex items-center divide-x">
-                <Switch/>
-            </div> */}
-
-            {/* <BsThreeDotsVertical /> */}
         </div>
     );
 }
