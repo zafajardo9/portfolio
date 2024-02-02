@@ -48,7 +48,7 @@ export default function Home() {
           <DrawerContent>
             <DrawerHeader>
               <DrawerTitle>You want to know me better?</DrawerTitle>
-              <DrawerDescription>Click on the Box</DrawerDescription>
+              {/* <DrawerDescription>Click on the Box</DrawerDescription> */}
             </DrawerHeader>
             <DrawerFooter>
                 <HeaderNav />
