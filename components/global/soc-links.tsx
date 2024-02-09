@@ -6,7 +6,7 @@ import { FaLinkedin, FaFacebookF, FaInstagram, FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 const SocLinks = () => {
   return (
-    <div className="flex justify-around text-[2rem] text-colorThree w-3/5">
+    <div className="flex text-sm justify-around sm:text-[2rem] text-colorThree w-3/5">
       <a href="https://github.com/zafajardo9">
         <FaGithub />
       </a>

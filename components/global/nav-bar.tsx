@@ -14,7 +14,12 @@ import { DrawerTrigger } from '../ui/drawer';
 
 export function Navbar() {
     return (
-        <div className="flex justify-between items-center bg-white px-8 rounded-lg m-3 shadow-md fixed top-0 left-1/2 transform -translate-x-1/2 w-full max-w-screen-xl">
+        <div className="flex justify-between items-center bg-white px-8 
+        rounded-lg m-3 shadow-md fixed top-0 left-1/2 
+        transform -translate-x-1/2 w-full max-w-screen-xl
+        
+        ">
+
             <div className="text-lg font-semibold">
             <Avatar>
                 <AvatarImage src="https://ik.imagekit.io/23umzxu6uw/2.png?updatedAt=1706607362185" />

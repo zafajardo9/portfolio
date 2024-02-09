@@ -47,9 +47,9 @@ const CopyToClipboardButton: React.FC<{ text: string }> = ({ text }) => {
 
 export function HeaderNav() {
   return (
-    <div className="flex">
+    <div className="sm:flex flex-row">
       <div className="w-full">
-        <div className="grid grid-cols-4 h-96 w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-4 h-96 w-full">
           <div>
             <div className="p-4 h-4/5 flex flex-col text-right justify-around">
               <h1 className="text-2xl font-bold">Say Hello</h1>
@@ -71,9 +71,8 @@ export function HeaderNav() {
               </HoverCard>
 
 
-              <div className="social-icons">
-                <SocLinks />
-              </div>
+
+              <SocLinks />
             </div>
 
             <p className="text-xs">Built By Zack</p>
