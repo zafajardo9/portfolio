@@ -45,19 +45,7 @@ export default function Home() {
   </div>
 
 
-          <DrawerContent>
-            <DrawerHeader>
-              <DrawerTitle>You want to know me better?</DrawerTitle>
-              {/* <DrawerDescription>Click on the Box</DrawerDescription> */}
-            </DrawerHeader>
-            <DrawerFooter>
-                <HeaderNav />
-              {/* <Button>Submit</Button>
-              <DrawerClose>
-                <Button variant="outline">Cancel</Button>
-              </DrawerClose> */}
-            </DrawerFooter>
-          </DrawerContent>
+
 
     </div>
 

@@ -21,10 +21,13 @@ export function Navbar() {
         ">
 
             <div className="text-lg font-semibold">
-            <Avatar>
-                <AvatarImage src="https://ik.imagekit.io/23umzxu6uw/2.png?updatedAt=1706607362185" />
-                <AvatarFallback>Z</AvatarFallback>
-            </Avatar>
+            <Link href="/">
+                <Avatar>
+                    <AvatarImage src="https://ik.imagekit.io/23umzxu6uw/2.png?updatedAt=1706607362185" />
+                    <AvatarFallback>Z</AvatarFallback>
+                </Avatar>
+            </Link>
+            
             </div>
             <div className="flex items-center divide-x">
                 <ul className="relative flex items-center justify-between h-16 bg-gray space-x-8">

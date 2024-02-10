@@ -83,9 +83,11 @@ export function HeaderNav() {
               <h1>My Works</h1>
             </div>
 
-            <Button variant="custom">
-              <Link href="#">See more</Link>
-            </Button>
+            <Link href="/works">
+                <Button variant="custom">
+                  See more
+                </Button>
+            </Link>
           </div>
 
           <div className="bg-colorTwo p-8 text-white font-bold flex flex-col justify-between">
@@ -93,19 +95,23 @@ export function HeaderNav() {
               <h1>Hobbies</h1>
             </div>
 
-            <Button variant="custom">
-              <Link href="#"> See more</Link>
-            </Button>
+            <Link href="/works">
+              <Button variant="custom">
+                See more
+              </Button>
+            </Link>
           </div>
 
           <div className="bg-colorThree p-8 text-white font-bold flex flex-col justify-between">
             <div className="text-2xl">
-              <h1>My Works</h1>
+              <h1>About Me</h1>
             </div>
 
-            <Button variant="custom">
-              <Link href="#">See more</Link>
-            </Button>
+            <Link href="/works">
+                <Button variant="custom" disabled>
+                  See more
+                </Button>
+            </Link>
           </div>
         </div>
       </div>
