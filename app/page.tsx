@@ -24,7 +24,7 @@ export default function Home() {
       {/* IMAGE */}
       <div className="flex items-center justify-center sm:w-1/2">
         <img
-          src="https://ik.imagekit.io/23umzxu6uw/DDD.png?updatedAt=1706796142895"
+          src="https://ik.imagekit.io/23umzxu6uw/Group%203image%20(1).png?updatedAt=1707617707488"
           alt=""
           className="w-[60%]"
         />

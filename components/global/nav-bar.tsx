@@ -34,7 +34,7 @@ export function Navbar() {
 
                     <li>
                         <Button variant="main">
-                            <Link href="https://ik.imagekit.io/23umzxu6uw/sample.pdf?updatedAt=1706605367594" className="hover:font-bold" data-no-prefetch>Download Resume</Link>
+                            <Link href="https://ik.imagekit.io/23umzxu6uw/Fajardo-Resume%201.pdf?updatedAt=1707619553129" className="hover:font-bold" data-no-prefetch>Download Resume</Link>
                         </Button>
                     </li>
                     
