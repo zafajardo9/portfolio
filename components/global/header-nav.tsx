@@ -18,7 +18,9 @@ import {
 import { useState } from 'react';
 import { LuCopy, LuCopyCheck } from "react-icons/lu";
 
-
+import {
+  DrawerClose,
+} from "@/components/ui/drawer"
 
 const CopyToClipboardButton: React.FC<{ text: string }> = ({ text }) => {
   const [copied, setCopied] = useState(false);
@@ -82,12 +84,16 @@ export function HeaderNav() {
             <div className="text-2xl">
               <h1>My Works</h1>
             </div>
-
-            <Link href="/works">
-                <Button variant="custom">
-                  See more
-                </Button>
-            </Link>
+            
+              <Link href="/works">
+                <DrawerClose>
+                  <Button variant="custom">
+                    See more
+                  </Button>
+                </DrawerClose>
+              </Link>
+            
+            
           </div>
 
           <div className="bg-colorTwo p-8 text-white font-bold flex flex-col justify-between">
@@ -95,10 +101,12 @@ export function HeaderNav() {
               <h1>Hobbies</h1>
             </div>
 
-            <Link href="/works">
-              <Button variant="custom">
-                See more
-              </Button>
+            <Link href="/hobbies">
+              <DrawerClose>
+                <Button variant="custom">
+                  See more
+                </Button>
+              </DrawerClose>
             </Link>
           </div>
 
@@ -108,9 +116,11 @@ export function HeaderNav() {
             </div>
 
             <Link href="/works">
+              <DrawerClose>
                 <Button variant="custom" disabled>
-                  See more
+                    See more
                 </Button>
+              </DrawerClose>
             </Link>
           </div>
         </div>

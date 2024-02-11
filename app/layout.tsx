@@ -7,17 +7,17 @@ import { HeaderNav } from "@/components/global/header-nav";
 
 import { Button } from "@/components/ui/button";
 
+import {motion, AnimatePresence} from "framer-motion";
 
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
-  DrawerDescription,
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
 } from "@/components/ui/drawer"
+import { MdMotionPhotosAuto } from "react-icons/md";
+import Transition from "./transition";
 
 const roboto = Roboto({
   weight: '400',
@@ -38,31 +38,31 @@ export default function RootLayout({
 
   return (
     <Drawer>
-    <html lang="en">
+        <html lang="en">
       
-          <body className={roboto.className}>
-          <Navbar />
-          {children}
+              <body className={roboto.className}>
+                
+              <Navbar />
+
+                <Transition>
+                
+                    {children}
+                </Transition>
+
+              <DrawerContent>
+                <DrawerHeader>
+                  <DrawerTitle>You want to know me better?</DrawerTitle>
+                </DrawerHeader>
+                <DrawerFooter>
+                    <HeaderNav />
+
+                </DrawerFooter>
+              </DrawerContent>
+
+              </body>
 
 
-          <DrawerContent>
-            <DrawerHeader>
-              <DrawerTitle>You want to know me better?</DrawerTitle>
-              {/* <DrawerDescription>Click on the Box</DrawerDescription> */}
-            </DrawerHeader>
-            <DrawerFooter>
-                <HeaderNav />
-              {/* <Button>Submit</Button>
-              <DrawerClose>
-                <Button variant="outline">Cancel</Button>
-              </DrawerClose> */}
-            </DrawerFooter>
-          </DrawerContent>
-
-          </body>
-
-
-    </html>
+        </html>
     </Drawer>
   );
 }
