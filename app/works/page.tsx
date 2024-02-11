@@ -19,13 +19,8 @@ import { IoLogoJavascript } from "react-icons/io";
 import { SiJupyter } from "react-icons/si";
 import { SiExpo } from "react-icons/si";
 
-//FONT
-import { Quicksand } from "next/font/google";
 
-const font = Quicksand({
-  weight: '400',
-  subsets: ['latin'],
-});
+
 
 
 const iconMap = {
@@ -39,9 +34,9 @@ const iconMap = {
 
 export default function About(){
   return (
-  <div className="w-full h-screen flex flex-col md:grid-cols-2 p-5 pt-24 ">
+  <div className="w-full h-screen flex flex-col md:grid-cols-2 p-5 pt-24">
 
-    <h1 className={`${font.className} font-bold text-4xl md:text-5xl lg:text-6xl text-center`}>
+    <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-center">
       WORKS
     </h1>
 

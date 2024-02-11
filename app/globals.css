@@ -9,6 +9,12 @@
   :root {
     --background: 0 0% 98%; 
     --foreground: 0 0% 3.9%;
+
+    /* --background: 0 0% 98%; 
+    --foreground: 0 0% 3.9%; */
+
+    /* --background: radial-gradient(18% 28% at 24% 50%, #E4FBFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #E9FAFFFF 1%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #F5FFD59C 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #FFE1E1F5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #F7F7F7F5 24%, #073AFF00 100%),linear-gradient(125deg, #FFFFFFFF 1%, #FFE6E6FF 100%); */
+
     /* --foreground: 0 0% 3.9%; */
 
     --card: 0 0% 100%;
@@ -78,5 +84,16 @@
   }
   body {
     @apply bg-background text-foreground;
+
   }
+}
+
+.background-image-radial {
+  background-image: radial-gradient(18% 28% at 24% 50%, #E4FBFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #E9FAFFFF 1%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #F5FFD59C 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #FFE1E1F5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #F7F7F7F5 24%, #073AFF00 100%),linear-gradient(125deg, #FFFFFFFF 1%, #FFE6E6FF 100%);
+}
+
+.background-image-radial-2 {
+  background-size: 100% 100%;
+  background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+  background-image: radial-gradient(18% 28% at 24% 50%, #E1E1E1FF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #DADADA9C 24%, #073AFF00 100%),linear-gradient(125deg, #F1F1F1FF 1%, #FFFFFFFF 100%);
 }
