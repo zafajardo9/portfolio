@@ -1,5 +1,5 @@
 import ContainerWorks from "@/components/global/works-component-container"
-
+import BubbleText from "@/components/global/bubble-text";
 
 import { GrPersonalComputer } from "react-icons/gr";
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
@@ -18,8 +18,7 @@ import { TbBrandReactNative } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiJupyter } from "react-icons/si";
 import { SiExpo } from "react-icons/si";
-
-
+import { CiCircleChevDown, CiSquareChevDown, CiCircleChevUp  } from "react-icons/ci";
 
 
 
@@ -36,9 +35,14 @@ export default function About(){
   return (
   <div className="w-full h-screen flex flex-col md:grid-cols-2 p-5 pt-24">
 
-    <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl text-center">
-      WORKS
-    </h1>
+      <div className="flex h-[25rem] items-center justify-center">
+            <span className="font-semibold uppercase text-neutral-500">
+            <BubbleText text="My Project / Works" />
+            <div className="pt-4 animate-bounce flex justify-center">
+                <CiCircleChevDown className=" text-4xl text-colorOne" />
+                </div>
+            </span>
+        </div>
 
 
     <div className="flex flex-col gap-4 p-4 md:grid md:grid-cols-3">

@@ -52,7 +52,7 @@ export function TypewriterEffectContainer() {
 
 
             <div className="flex flex-col m-1 md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 text-lg ">
-              <Link href={'/'}>
+              <Link href="/works">
                 <Button variant="main">
                   Know my works
                 </Button>
