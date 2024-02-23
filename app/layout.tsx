@@ -18,6 +18,8 @@ import {
 } from "@/components/ui/drawer"
 import { MdMotionPhotosAuto } from "react-icons/md";
 import Transition from "./transition";
+import { FloatingNav } from "@/components/ui/floating-navbar";
+import { FloatingNavMain } from "@/components/global/main-nav-floating";
 
 const roboto = Roboto({
   weight: '400',
@@ -42,13 +44,17 @@ export default function RootLayout({
       
               <body className={roboto.className}>
                 
-              <Navbar />
+              <FloatingNavMain />
 
                 <Transition>
                 
                     {children}
                 </Transition>
 
+
+
+                
+{/* 
               <DrawerContent>
                 <DrawerHeader>
                   <DrawerTitle>You want to know me better?</DrawerTitle>
@@ -57,7 +63,7 @@ export default function RootLayout({
                     <HeaderNav />
 
                 </DrawerFooter>
-              </DrawerContent>
+              </DrawerContent> */}
 
               </body>
 

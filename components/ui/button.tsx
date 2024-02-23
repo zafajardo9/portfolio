@@ -19,7 +19,8 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         custom: "w-full px-4 py-2 border border-white rounded-none text-white font-bold bg-transparent outline-none transition duration-300 ease-in-out hover:text-primary hover:bg-white",
-        main: "bg-colorOne text-primary-foreground hover:bg-colorOne hover:bg-opacity-90",
+        main: "w-full bg-colorOne text-primary-foreground hover:bg-opacity-80 rounded-xl transition-all ease-in duration-300",
+        main_second: "w-full border border-colorOne text-colorOne hover:bg-colorOne hover:text-primary-foreground hover:bg-opacity-90 rounded-xl transition-all ease-in duration-300",
         btn_icon_works: "rounded-full px-6 py-1 flex items-center gap-3 text-sm font-bold border",
       },
       size: {
