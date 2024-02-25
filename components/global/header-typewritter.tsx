@@ -5,6 +5,18 @@ import Link from 'next/link';
 
 import { Button } from "@/components/ui/button"
 
+import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { MdAlternateEmail } from "react-icons/md";
+import { buttonVariants } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 
 export function TypewriterEffectContainer() {
@@ -52,17 +64,49 @@ export function TypewriterEffectContainer() {
 
 
             <div className="flex flex-col m-1 md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 text-lg ">
-              <Link href="/works">
-                <Button variant="main">
+              <Link href="/works" className={buttonVariants({ variant: "main" })}>
                   Know my works
-                </Button>
               </Link>
-              <Link href={'/'}>
-                <Button variant="main_second">
+
+              <DropdownMenu>
+
+              <DropdownMenuTrigger className={buttonVariants({ variant: "main_second" },)}> 
                   Get in touch
-                </Button>
-              </Link>
+              </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuLabel>My Social Media Sites</DropdownMenuLabel>
+
+                  <DropdownMenuSeparator />
+                  
+                  <Link href="https://www.facebook.com/zafajardo/" target="_blank">
+                    <DropdownMenuItem>
+                    <FaFacebook className="mr-3"/>Facebook
+                    </DropdownMenuItem>
+                  </Link>
+                  <Link href="https://github.com/zafajardo9" target="_blank">
+                    <DropdownMenuItem>
+                    <FaGithub className="mr-3"/>Github
+                    </DropdownMenuItem>
+                  </Link>
+                  <Link href="https://www.linkedin.com/in/zackery-alline-fajardo-642755126/" target="_blank">
+                    <DropdownMenuItem>
+                    <FaLinkedin className="mr-3"/>LinkedIn
+                    </DropdownMenuItem>
+                  </Link>
+                  <Link href="https://www.instagram.com/zahiroshi/" target="_blank">
+                    <DropdownMenuItem>
+                    <FaInstagram className="mr-3"/>Instagram
+                    </DropdownMenuItem>
+                  </Link>
+                  <DropdownMenuItem><MdAlternateEmail className="mr-3"/> zafajardo@gmail.com</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+
+
               
+
+
             </div>
 
         </div>

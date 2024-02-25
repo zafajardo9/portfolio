@@ -77,7 +77,7 @@ export const FloatingNav = ({
       ))}
 
 
-  <Link href="https://ik.imagekit.io/23umzxu6uw/Fajardo-Resume%201.pdf?updatedAt=1707619553129" target="_blank">
+  <Link href="https://ik.imagekit.io/23umzxu6uw/Fajardo,%20Zackery%20Alline.pdf?updatedAt=1708830391880" target="_blank">
       <button className="border font-medium relative bg-colorOne border-neutral-200 dark:border-white/[0.2] text-white dark:text-black px-4 py-2 rounded-full">
         <span className="hidden md:inline-block hover:font-bold">
           Download Resume/CV

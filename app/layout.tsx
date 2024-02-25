@@ -39,36 +39,18 @@ export default function RootLayout({
 
 
   return (
-    <Drawer>
         <html lang="en">
       
               <body className={roboto.className}>
                 
               <FloatingNavMain />
-
                 <Transition>
-                
                     {children}
                 </Transition>
-
-
-
-                
-{/* 
-              <DrawerContent>
-                <DrawerHeader>
-                  <DrawerTitle>You want to know me better?</DrawerTitle>
-                </DrawerHeader>
-                <DrawerFooter>
-                    <HeaderNav />
-
-                </DrawerFooter>
-              </DrawerContent> */}
 
               </body>
 
 
         </html>
-    </Drawer>
   );
 }
