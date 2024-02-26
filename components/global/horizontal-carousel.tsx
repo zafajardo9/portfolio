@@ -29,7 +29,7 @@ const Card = ({ card }: { card: CardType }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+      className="group relative h-[300px] w-[450px] overflow-hidden bg-neutral-200"
     >
       <div
         style={{
@@ -39,10 +39,13 @@ const Card = ({ card }: { card: CardType }) => {
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/10 to-white/0 p-8 text-5xl font-black text-white backdrop-blur-2xl">
-          {card.title}
-        </p>
+      <div className="absolute inset-0 z-10 grid place-content-end">
+        {/* <div className="bg-gradient-to-br from-white/10 to-white/0 font-black text-white backdrop-blur-sm"> */}
+          <p className="px-4 py-1 mr-2 mb-2 text-1xl bg-colorTwo rounded-full text-white">
+            {card.title}
+          </p>
+          
+        {/* </div> */}
       </div>
     </div>
   );

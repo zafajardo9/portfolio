@@ -2,10 +2,16 @@
 import BubbleText from "@/components/global/bubble-text";
 import ScrollToTopButton from "@/components/global/go-top-btn";
 import HorizontalScrollCarousel from "@/components/global/horizontal-carousel";
+import { LayoutGridContainer } from "@/components/global/layout-grids";
+import { LayoutGrid } from "@/components/ui/layout-grid";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 
 import { CiCircleChevDown, CiSquareChevDown, CiCircleChevUp  } from "react-icons/ci";
 import { FaAngleDown } from "react-icons/fa";
+import { cn } from "@/utils/cn";
+
+const getRandomGridSpan = () => Math.floor(Math.random() * 3) + 1; // Randomly assigns a span of 1 to 3 columns
+
 
 export default function Hobby(){
 
@@ -34,17 +40,29 @@ export default function Hobby(){
             </span>
         </div>
         </div>
-        <ParallaxScroll images={images} />
 
 
+        {/* <div className="sticky top-0 flex h-screen items-center">
+          <ParallaxScroll images={images} />
+        </div> */}
+            {/* <div className="h-screen py-20 w-full">
+              <LayoutGrid cards={cards} />
+            </div> */}
+
+
+
+<div className="w-full h-full p-8 grid grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto gap-4">
+      {cards.map((card, i) => (
+        <div key={i} className={cn(card.className, "")}>
+          <img src={card.imageUrl} alt={`Image ${i}`} className="w-full h-full object-cover rounded-xl" />
+        </div>
+      ))}
+    </div>
 
         <ScrollToTopButton />
 
     </div>
-    
-    
-    
-    
+
     
     );
 
@@ -82,46 +100,14 @@ const images = [
   ];
   
 
-  type CardType = {
-    url: string;
-    title: string;
-    id: number;
-  };
 
-  const cards: CardType[] = [
-    {
-      url: "/imgs/abstract/1.jpg",
-      title: "Title 1",
-      id: 1,
-    },
-    {
-      url: "/imgs/abstract/2.jpg",
-      title: "Title 2",
-      id: 2,
-    },
-    {
-      url: "/imgs/abstract/3.jpg",
-      title: "Title 3",
-      id: 3,
-    },
-    {
-      url: "/imgs/abstract/4.jpg",
-      title: "Title 4",
-      id: 4,
-    },
-    {
-      url: "/imgs/abstract/5.jpg",
-      title: "Title 5",
-      id: 5,
-    },
-    {
-      url: "/imgs/abstract/6.jpg",
-      title: "Title 6",
-      id: 6,
-    },
-    {
-      url: "/imgs/abstract/7.jpg",
-      title: "Title 7",
-      id: 7,
-    },
+  const cards = [
+    { imageUrl: '/assets/1.jpg', title: 'Image 1', className: "md:col-span-2",},
+    { imageUrl: '/assets/2.jpg', title: 'Image 2', className: "md:col-span-1",},
+    { imageUrl: '/assets/3.jpg', title: 'Image 3', className: "md:col-span-1",},
+    { imageUrl: '/assets/4.jpg', title: 'Image 4', className: "md:col-span-1",},
+    { imageUrl: '/assets/5.jpg', title: 'Image 5', className: "md:col-span-1",},
+    { imageUrl: '/assets/6.jpg', title: 'Image 6', className: "md:col-span-1",},
+    { imageUrl: '/assets/7.jpg', title: 'Image 7', className: "md:col-span-2",},
+    // Add more card objects as needed
   ];

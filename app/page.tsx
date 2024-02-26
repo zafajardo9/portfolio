@@ -14,12 +14,14 @@ import {
 import SocLinks from "@/components/global/soc-links";
 import { HeaderNav } from "@/components/global/header-nav";
 import { TypewriterEffectContainer } from "@/components/global/header-typewritter";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 
 export default function Home() {
   return (
   <div className="w-full h-screen">
     <TypewriterEffectContainer />
+    <BackgroundBeams />
   </div>
 
 
