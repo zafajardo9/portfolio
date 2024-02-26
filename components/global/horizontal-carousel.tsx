@@ -4,7 +4,6 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 
 
-
 const HorizontalScrollCarousel = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -34,14 +33,14 @@ const Card = ({ card }: { card: CardType }) => {
     >
       <div
         style={{
-          backgroundImage: `url(${card.url})`,
+          backgroundImage: `url('${card.url}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+        <p className="bg-gradient-to-br from-white/10 to-white/0 p-8 text-5xl font-black text-white backdrop-blur-2xl">
           {card.title}
         </p>
       </div>
@@ -59,38 +58,58 @@ type CardType = {
 
 const cards: CardType[] = [
   {
-    url: "/imgs/abstract/1.jpg",
-    title: "Title 1",
+    url: "https://ik.imagekit.io/23umzxu6uw/img/1.jpg?updatedAt=1708913006893",
+    title: "Fortinet",
     id: 1,
   },
   {
-    url: "/imgs/abstract/2.jpg",
-    title: "Title 2",
+    url: "https://ik.imagekit.io/23umzxu6uw/img/2.jpg?updatedAt=1708913006166",
+    title: "Fortinet",
     id: 2,
   },
   {
-    url: "/imgs/abstract/3.jpg",
-    title: "Title 3",
+    url: "https://ik.imagekit.io/23umzxu6uw/img/3.jpg?updatedAt=1708913008471",
+    title: "Seminar",
     id: 3,
   },
   {
-    url: "/imgs/abstract/4.jpg",
-    title: "Title 4",
+    url: "https://ik.imagekit.io/23umzxu6uw/img/4.jpg?updatedAt=1708913007716",
+    title: "Fortinet NSE 1",
     id: 4,
   },
   {
-    url: "/imgs/abstract/5.jpg",
-    title: "Title 5",
+    url: "https://ik.imagekit.io/23umzxu6uw/img/5.jpg?updatedAt=1708913007855",
+    title: "Fortinet NSE 2",
     id: 5,
   },
   {
-    url: "/imgs/abstract/6.jpg",
-    title: "Title 6",
+    url: "https://ik.imagekit.io/23umzxu6uw/img/6.jpg?updatedAt=1708913007182",
+    title: "TrendMicro",
     id: 6,
   },
   {
-    url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
+    url: "https://ik.imagekit.io/23umzxu6uw/img/7.jpg?updatedAt=1708913007443",
+    title: "TrendMicro",
     id: 7,
+  },
+  {
+    url: "https://ik.imagekit.io/23umzxu6uw/img/8.jpg?updatedAt=1708913008018",
+    title: "TrendMicro",
+    id: 8,
+  },
+  {
+    url: "https://ik.imagekit.io/23umzxu6uw/img/9.jpg?updatedAt=1708913010141",
+    title: "TrendMicro",
+    id: 9,
+  },
+  {
+    url: "https://ik.imagekit.io/23umzxu6uw/img/10.jpg?updatedAt=1708913007233",
+    title: "TrendMicro",
+    id: 10,
+  },
+  {
+    url: "https://ik.imagekit.io/23umzxu6uw/img/11.jpg?updatedAt=1708913003975",
+    title: "Seminar",
+    id: 11,
   },
 ];

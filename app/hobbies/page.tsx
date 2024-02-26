@@ -34,7 +34,7 @@ export default function Hobby(){
             </span>
         </div>
         </div>
-        {/* <ParallaxScroll images={images} /> */}
+        <ParallaxScroll images={images} />
 
 
 
