@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"  
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { IoDownload } from "react-icons/io5";
 
 export const FloatingNav = ({
@@ -31,7 +31,7 @@ export const FloatingNav = ({
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
-      if (scrollYProgress.get() < 0.10) {
+      if (scrollYProgress.get() < 0.1) {
         setVisible(false);
       } else {
         if (direction < 0) {
@@ -50,18 +50,14 @@ export const FloatingNav = ({
         className
       )}
     >
-
-
-
-            <div className="text-lg font-semibold">
-              <Link href="/">
-                  <Avatar>
-                      <AvatarImage src="https://ik.imagekit.io/23umzxu6uw/2.png?updatedAt=1706607362185" />
-                      <AvatarFallback>Z</AvatarFallback>
-                  </Avatar>
-              </Link>
-            
-            </div>
+      <div className="text-lg font-semibold">
+        <Link href="/">
+          <Avatar>
+            <AvatarImage src="https://ik.imagekit.io/23umzxu6uw/2.png?updatedAt=1706607362185" />
+            <AvatarFallback>Z</AvatarFallback>
+          </Avatar>
+        </Link>
+      </div>
 
       {navItems.map((navItem: any, idx: number) => (
         <Link
@@ -76,19 +72,22 @@ export const FloatingNav = ({
         </Link>
       ))}
 
+      <Link
+        href="https://ik.imagekit.io/23umzxu6uw/Resume/Fajardo,%20Zackery%20Alline%20(July).pdf?updatedAt=1721824466236"
+        target="_blank"
+      >
+        <button className="border font-medium relative bg-colorOne border-neutral-200 dark:border-white/[0.2] text-white dark:text-black px-4 py-2 rounded-full">
+          <span className="hidden md:inline-block hover:font-bold">
+            Download Resume/CV
+          </span>
 
-  <Link href="https://ik.imagekit.io/23umzxu6uw/Fajardo,%20Zackery%20Alline.pdf?updatedAt=1708830391880" target="_blank">
-      <button className="border font-medium relative bg-colorOne border-neutral-200 dark:border-white/[0.2] text-white dark:text-black px-4 py-2 rounded-full">
-        <span className="hidden md:inline-block hover:font-bold">
-          Download Resume/CV
-        </span>
-
-        <span className="text-xs sm:hidden flex">Download<IoDownload /></span>
-        <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-orange-400 to-transparent h-px md:hidden">
-        </span>
-      </button>
-    </Link>
-
+          <span className="text-xs sm:hidden flex">
+            Download
+            <IoDownload />
+          </span>
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-orange-400 to-transparent h-px md:hidden"></span>
+        </button>
+      </Link>
     </div>
   );
 };
