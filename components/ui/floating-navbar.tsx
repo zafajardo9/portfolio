@@ -10,6 +10,7 @@ import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { IoDownload } from "react-icons/io5";
+import { resumeLink } from "@/lib/resume-link";
 
 export const FloatingNav = ({
   navItems,
@@ -72,10 +73,7 @@ export const FloatingNav = ({
         </Link>
       ))}
 
-      <Link
-        href="https://ik.imagekit.io/23umzxu6uw/Resume/Fajardo,%20Zackery%20Alline%20(July).pdf?updatedAt=1721824466236"
-        target="_blank"
-      >
+      <Link href={resumeLink} target="_blank">
         <button className="border font-medium relative bg-colorOne border-neutral-200 dark:border-white/[0.2] text-white dark:text-black px-4 py-2 rounded-full">
           <span className="hidden md:inline-block hover:font-bold">
             Download Resume/CV
