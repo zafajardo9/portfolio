@@ -38,7 +38,7 @@ const projects: Project[] = [
     projectInfo: "Our Application or specifically mobile application is named 'BudgetBud' shortened phrase of 'Your Budgeting Buddy'. We envision that this app will make personal finance management or budgeting a breeze for everyone.",
     techIcons: ["RiFlutterFill", "SiDart", "IoLogoFirebase"],
     githubLink: "https://github.com/zafajardo9/BudgetBud",
-    liveDemoLink: "#",
+    liveDemoLink: "https://budgetbud.netlify.app/",
     status: "On Going",
     branch: "main",
   },
