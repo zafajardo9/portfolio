@@ -17,18 +17,20 @@ import { IoLogoJavascript } from "react-icons/io";
 import { SiJupyter } from "react-icons/si";
 import { SiExpo } from "react-icons/si";
 
-export type Project = {
-    icon: string; // Use string for icon reference
-    projectName: string;
-    details: string;
-    projectInfo: string;
-    techIcons: string[]; // Use string array for tech icons
-    githubLink: string;
-    liveDemoLink: string;
-    status: string;
-    branch: string;
-  };
+const DEFAULT_IMAGE_URL = "https://ik.imagekit.io/eioac6dye/portfolio/prev.jpg?updatedAt=1727280824298";
 
+export type Project = {
+  icon: string; // Use string for icon reference
+  projectName: string;
+  details: string;
+  projectInfo: string;
+  techIcons: string[]; // Use string array for tech icons
+  githubLink: string;
+  liveDemoLink: string;
+  status: string;
+  branch: string;
+  imageUrl?: string; // Make imageUrl optional
+};
 
 const projects: Project[] = [
   {
@@ -41,6 +43,7 @@ const projects: Project[] = [
     liveDemoLink: "https://budgetbud.netlify.app/",
     status: "On Going",
     branch: "main",
+    imageUrl: "https://ik.imagekit.io/eioac6dye/portfolio/BudgetBud.png?updatedAt=1727280925867",
   },
   {
     icon: "website",
@@ -52,6 +55,7 @@ const projects: Project[] = [
     liveDemoLink: "https://research-info-system.vercel.app",
     status: "On Going",
     branch: "main",
+    imageUrl: "https://ik.imagekit.io/eioac6dye/portfolio/RIS.png?updatedAt=1727280899940",
   },
   {
     icon: "data",
@@ -74,6 +78,7 @@ const projects: Project[] = [
     liveDemoLink: "https://github.com/zafajardo9/path-finder",
     status: "Finished",
     branch: "main",
+    imageUrl: "https://ik.imagekit.io/eioac6dye/portfolio/path-finder.png?updatedAt=1727282291012",
   },
   {
     icon: "website",
@@ -107,6 +112,7 @@ const projects: Project[] = [
     liveDemoLink: "https://github.com/zafajardo9/reacttimer",
     status: "Finished",
     branch: "main",
+    imageUrl: "https://ik.imagekit.io/eioac6dye/portfolio/timer.jpg?updatedAt=1727281800979",
   },
   {
     icon: "mobileApp",
@@ -118,6 +124,7 @@ const projects: Project[] = [
     liveDemoLink: "https://github.com/zafajardo9/The-Weather-App",
     status: "Finished",
     branch: "main",
+    imageUrl: "https://ik.imagekit.io/eioac6dye/portfolio/weather.jpg?updatedAt=1727281932115",
   },
   {
     icon: "website",
@@ -129,6 +136,7 @@ const projects: Project[] = [
     liveDemoLink: "https://github.com/zafajardo9/eCommerce_CarRental",
     status: "Finished",
     branch: "main",
+    imageUrl: "https://raw.githubusercontent.com/zafajardo9/eCommerce_CarRental/main/documentation/1.jpg",
   },
   {
     icon: "game",
@@ -140,7 +148,14 @@ const projects: Project[] = [
     liveDemoLink: "https://github.com/zafajardo9/wokeuplikethis",
     status: "Finished",
     branch: "main",
+    // imageUrl: "https://picsum.photos/400/300?random=1",
   },
 ];
 
-export default projects;
+// Function to ensure all projects have an imageUrl
+const projectsWithDefaultImage: Project[] = projects.map(project => ({
+  ...project,
+  imageUrl: project.imageUrl || DEFAULT_IMAGE_URL
+}));
+
+export default projectsWithDefaultImage;

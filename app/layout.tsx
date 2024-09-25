@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto  } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/global/nav-bar";
 import Footer from "@/components/global/footer";
@@ -7,7 +7,7 @@ import { HeaderNav } from "@/components/global/header-nav";
 
 import { Button } from "@/components/ui/button";
 
-import {motion, AnimatePresence} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import {
   Drawer,
@@ -20,6 +20,9 @@ import { MdMotionPhotosAuto } from "react-icons/md";
 import Transition from "./transition";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FloatingNavMain } from "@/components/global/main-nav-floating";
+
+import { Suspense } from 'react'
+import Loading from './loading'
 
 const roboto = Roboto({
   weight: '400',
@@ -39,18 +42,18 @@ export default function RootLayout({
 
 
   return (
-        <html lang="en">
-      
-              <body className={roboto.className}>
-                
-              <FloatingNavMain />
-                <Transition>
-                    {children}
-                </Transition>
+    <html lang="en">
 
-              </body>
+      <body className={roboto.className}>
+
+        <FloatingNavMain />
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
+
+      </body>
 
 
-        </html>
+    </html>
   );
 }

@@ -1,5 +1,10 @@
-import ContainerWorks from "@/components/global/works-component-container";
-import BubbleText from "@/components/global/bubble-text";
+'use client'
+
+import { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
+
+const ContainerWorks = dynamic(() => import('@/components/global/works-component-container'), { ssr: false })
+const BubbleText = dynamic(() => import('@/components/global/bubble-text'), { ssr: false })
 
 import { GrPersonalComputer } from "react-icons/gr";
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
@@ -34,124 +39,6 @@ const iconMap: { [key: string]: JSX.Element } = {
   normal: <RiCodeFill />,
 };
 
-// const projectList = [
-//   {
-//     icon: iconMap.mobileApp,
-//     projectName: "BudgetBud",
-//     details: "Your budget buddy",
-//     projectInfo:
-//       "Our Application or specifically mobile application is named “BudgetBud” shortened phrase of “Your Budgeting Buddy”. We envision that this app will make personal finance management or budgeting a breeze for everyone.",
-//     techIcons: [<RiFlutterFill />, <SiDart />, <IoLogoFirebase />],
-//     githubLink: "https://github.com/zafajardo9/BudgetBud",
-//     liveDemoLink: "#",
-//     status: "On Going",
-//     branch: "main",
-//   },
-//   {
-//     icon: iconMap.website,
-//     projectName: "PUP-RIS",
-//     details: "University Website",
-//     projectInfo:
-//       "The system will serve as a centralized repository for research papers, enabling students to submit their work for review and approval by research professors or advisers.",
-//     techIcons: [<TbBrandNextjs />, <SiFastapi />, <SiTailwindcss />],
-//     githubLink: "https://github.com/zafajardo9/research-info-system",
-//     liveDemoLink: "https://research-info-system.vercel.app",
-//     status: "On Going",
-//     branch: "main",
-//   },
-//   {
-//     icon: iconMap.data,
-//     projectName: "Market Prediction",
-//     details: "Learning",
-//     projectInfo:
-//       "From tutorial for learning Machine Leaning with Jupyter Notebook",
-//     techIcons: [<SiJupyter />],
-//     githubLink: "https://github.com/zafajardo9/marketpredict",
-//     liveDemoLink: "https://github.com/zafajardo9/marketpredict",
-//     status: "Finished",
-//     branch: "main",
-//   },
-//   {
-//     icon: iconMap.normal,
-//     projectName: "Path Finder Algorithm",
-//     details: "Made in Javascript",
-//     projectInfo:
-//       "Made to learn more JS and tried to make a visualization on how the algorithms work",
-//     techIcons: [<IoLogoJavascript />],
-//     githubLink: "https://github.com/zafajardo9/path-finder",
-//     liveDemoLink: "https://github.com/zafajardo9/path-finder",
-//     status: "Finished",
-//     branch: "main",
-//   },
-//   {
-//     icon: iconMap.website,
-//     projectName: "Messenger Chat",
-//     details: "Side Project",
-//     projectInfo: "Learning React and Firebase",
-//     techIcons: [<FaReact />, <IoLogoFirebase />],
-//     githubLink: "https://github.com/zafajardo9/ChatMessenger",
-//     liveDemoLink: "https://github.com/zafajardo9/ChatMessenger",
-//     status: "Finished",
-//     branch: "main",
-//   },
-//   {
-//     icon: iconMap.mobileApp,
-//     projectName: "Habit Tracker",
-//     details: "Check and Track yourself",
-//     projectInfo:
-//       "Daily check and tracker for habits and shows heatspots of your activities in days and months",
-//     techIcons: [<RiFlutterFill />, <SiDart />, <IoLogoFirebase />],
-//     githubLink: "https://github.com/zafajardo9/HabitTrack",
-//     liveDemoLink: "https://github.com/zafajardo9/HabitTrack",
-//     status: "Finished",
-//     branch: "main",
-//   },
-//   {
-//     icon: iconMap.mobileApp,
-//     projectName: "Timer",
-//     details: "Side Project",
-//     projectInfo: "Made for learning React Native and Expo",
-//     techIcons: [<TbBrandReactNative />, <SiExpo />],
-//     githubLink: "https://github.com/zafajardo9/reacttimer",
-//     liveDemoLink: "https://github.com/zafajardo9/reacttimer",
-//     status: "Finished",
-//     branch: "main",
-//   },
-//   {
-//     icon: iconMap.mobileApp,
-//     projectName: "The Weather App",
-//     details: "Side Project",
-//     projectInfo:
-//       "Made for learning React Native and Expo with fetching data from API",
-//     techIcons: [<TbBrandReactNative />, <SiExpo />],
-//     githubLink: "https://github.com/zafajardo9/The-Weather-App",
-//     liveDemoLink: "https://github.com/zafajardo9/The-Weather-App",
-//     status: "Finished",
-//     branch: "main",
-//   },
-//   {
-//     icon: iconMap.website,
-//     projectName: "Car Rental",
-//     details: "Programming Assignment",
-//     projectInfo: "Showcase what we learned with SQL database and PHP",
-//     techIcons: [<FaPhp />, <FaHtml5 />, <FaCss3Alt />],
-//     githubLink: "https://github.com/zafajardo9/eCommerce_CarRental",
-//     liveDemoLink: "https://github.com/zafajardo9/eCommerce_CarRental",
-//     status: "Finished",
-//     branch: "main",
-//   },
-//   {
-//     icon: iconMap.game,
-//     projectName: "WokeUpLikeThis",
-//     details: "Section Project",
-//     projectInfo: "Showcase what we learned from game development class",
-//     techIcons: [<FaUnity />],
-//     githubLink: "https://github.com/zafajardo9/wokeuplikethis",
-//     liveDemoLink: "https://github.com/zafajardo9/wokeuplikethis",
-//     status: "Finished",
-//     branch: "main",
-//   },
-// ];
 type IconName =
   | "RiFlutterFill"
   | "SiDart"
@@ -198,18 +85,28 @@ const iconComponents = {
 };
 
 export default function About() {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if (!isClient) {
+    return null // or a loading spinner
+  }
+
   return (
-    <div className="w-full h-screen flex flex-col md:grid-cols-2 p-5 pt-24">
+    <div className="w-full min-h-screen flex flex-col p-3 pt-24 md:p-5 lg:px-20">
       <div className="flex h-[25rem] items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           <BubbleText text="My Project / Works" />
           <div className="pt-4 animate-bounce flex justify-center">
-            <CiCircleChevDown className=" text-4xl text-colorOne" />
+            <CiCircleChevDown className="text-4xl text-colorOne" />
           </div>
         </span>
       </div>
 
-      <div className="flex flex-col gap-4 p-4 md:grid md:grid-cols-3">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <ContainerWorks
             key={index}
@@ -218,7 +115,7 @@ export default function About() {
             details={project.details}
             projectInfo={project.projectInfo}
             techIcons={project.techIcons.map((iconName) => {
-              const IconComponent = iconComponents[iconName as IconName]; // Cast iconName to IconName
+              const IconComponent = iconComponents[iconName as IconName];
               if (!IconComponent) {
                 console.error(
                   `Icon ${iconName} not found in iconComponents mapping.`
@@ -231,6 +128,7 @@ export default function About() {
             liveDemoLink={project.liveDemoLink}
             status={project.status}
             branch={project.branch}
+            imageUrl={project.imageUrl}
           />
         ))}
       </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
-import {Navbar} from "../components/global/nav-bar"
+import { Navbar } from "../components/global/nav-bar"
 import {
   Drawer,
   DrawerClose,
@@ -19,10 +19,10 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function Home() {
   return (
-  <div className="w-full h-screen">
-    <TypewriterEffectContainer />
-    <BackgroundBeams />
-  </div>
+    <div className="w-full h-screen">
+      <TypewriterEffectContainer />
+      <BackgroundBeams />
+    </div>
 
 
 
