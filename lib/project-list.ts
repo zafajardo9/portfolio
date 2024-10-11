@@ -32,7 +32,19 @@ export type Project = {
   imageUrl?: string; // Make imageUrl optional
 };
 
-const projects: Project[] = [
+const projects: Project[] = [ https://ik.imagekit.io/eioac6dye/portfolio/kippap.png?updatedAt=1728660751626
+                               {
+    icon: "website",
+    projectName: "Kippap Portal",
+    details: "Kippap Learning website and portal",
+    projectInfo: "Needed for kippap flexing its services and goals and user to be able to join with the company's fun interactive way of learning",
+    techIcons: ["RiFlutterFill", "SiDart", "IoLogoFirebase"],
+    githubLink: "https://wpvip.edutopia.org/wp-content/uploads/2022/10/holland-no-google.gif?w=2880&quality=85",
+    liveDemoLink: "https://wpvip.edutopia.org/wp-content/uploads/2022/10/holland-no-google.gif?w=2880&quality=85",
+    status: "On Going",
+    branch: "main",
+    imageUrl: "https://ik.imagekit.io/eioac6dye/portfolio/kippap.png?updatedAt=1728660751626",
+  },
   {
     icon: "mobileApp",
     projectName: "BudgetBud",
