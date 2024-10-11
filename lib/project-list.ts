@@ -11,11 +11,12 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiFastapi, SiTailwindcss } from "react-icons/si";
 import { RiCodeFill } from "react-icons/ri";
-import { FaPhp, FaHtml5, FaCss3Alt, FaUnity, FaReact } from "react-icons/fa";
+import { FaPhp, FaHtml5, FaCss3Alt, FaUnity, FaReact, FaLaravel, FaAws } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiJupyter } from "react-icons/si";
 import { SiExpo } from "react-icons/si";
+
 
 const DEFAULT_IMAGE_URL = "https://ik.imagekit.io/eioac6dye/portfolio/prev.jpg?updatedAt=1727280824298";
 
@@ -32,13 +33,13 @@ export type Project = {
   imageUrl?: string; // Make imageUrl optional
 };
 
-const projects: Project[] = [ https://ik.imagekit.io/eioac6dye/portfolio/kippap.png?updatedAt=1728660751626
-                               {
+const projects: Project[] = [ 
+  {
     icon: "website",
     projectName: "Kippap Portal",
     details: "Kippap Learning website and portal",
     projectInfo: "Needed for kippap flexing its services and goals and user to be able to join with the company's fun interactive way of learning",
-    techIcons: ["RiFlutterFill", "SiDart", "IoLogoFirebase"],
+    techIcons: ["RiFlutterFill", "FaLaravel", "FaAws"],
     githubLink: "https://wpvip.edutopia.org/wp-content/uploads/2022/10/holland-no-google.gif?w=2880&quality=85",
     liveDemoLink: "https://wpvip.edutopia.org/wp-content/uploads/2022/10/holland-no-google.gif?w=2880&quality=85",
     status: "On Going",
